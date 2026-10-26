@@ -1,0 +1,37 @@
+# GitHub Pages 部署: 用 Actions 而非仓库设置里的 Pages 开关。
+# 原因: gh 的 OAuth token 没有 `pages` scope, 无法通过 API PUT /pages 启用;
+#       Actions 的 deploy-pages 只需要 `pages: write` 这类 workflow 权限,
+#       而 token 已有 `workflow` scope。
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+        with:
+          # 仓库还没有 Pages 站点时, 由这个 action 自动创建
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
