@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>服务条款 · Sapling</title>
+<style>
+:root{
+  --brand:#30CF79; --brand-deep:#346538; --brand-50:#EDF3EC; --brand-100:#DEE9DD;
+  --paper:#F7F6F3; --card:#FFFFFF; --line:#EAEAEA; --linesoft:#F1F0EE;
+  --ink:#1F2427; --ink-2:#6A6A66; --ink-3:#8C8B87; --hairline:#D9D7D2;
+}
+[data-theme="dark"]{
+  --brand-deep:#8FE3B0; --brand-50:#22301F; --brand-100:#2B4030;
+  --paper:#191919; --card:#202020; --line:#2E2E2E; --linesoft:#262626;
+  --ink:#F0EEEA; --ink-2:#A8A6A2; --ink-3:#7C7A76; --hairline:#3F3D3A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:16px/1.78 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:680px;margin:0 auto;padding:48px 20px 96px}
+.back{display:inline-block;font-size:13px;color:var(--ink-3);text-decoration:none;margin-bottom:20px}
+.back:hover{color:var(--ink)}
+h1{font-family:Georgia,"Songti SC","Noto Serif SC",serif;font-size:30px;line-height:1.25;
+  letter-spacing:-.015em;margin:0 0 6px;font-weight:600}
+.updated{font-size:12.5px;color:var(--ink-3);margin:0 0 40px}
+h2{font-size:19px;font-weight:600;margin:36px 0 10px;letter-spacing:-.005em}
+p{margin:0 0 14px;color:var(--ink-2)}
+strong{color:var(--ink);font-weight:600}
+ul{margin:0 0 14px;padding-left:22px;color:var(--ink-2)}
+li{margin:5px 0}
+a{color:var(--brand-deep);text-decoration:underline;text-underline-offset:3px}
+a:hover{color:var(--brand)}
+.sig{font-size:12.5px;color:var(--ink-3);margin-top:48px;padding-top:20px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../">← 返回</a>
+  <h1>服务条款</h1>
+  <p class="updated">Sapling · 最后更新：2026-10-27</p>
+
+  <h2>1. 这是什么</h2>
+  <p>Sapling 是一个<strong>自托管的个人内容库</strong>：把网页、视频、播客剪藏进来，转成可检索的文档。</p>
+  <p>本 App 不自带云服务。你需要在首次使用时填入<strong>你自己部署的服务器地址</strong>，内容也只存在那台服务器上。</p>
+
+  <h2>2. 使用条件</h2>
+  <ul>
+    <li>你需要自行准备并维护 Sapling 服务端（一台能跑 Docker 的机器即可）</li>
+    <li>你对自己服务器上的全部数据负责，包括备份与访问控制</li>
+    <li>你需要确保所剪藏的内容符合当地法律与目标网站的服务条款</li>
+  </ul>
+
+  <h2>3. 账号与安全</h2>
+  <ul>
+    <li>账号体系运行在<strong>你自己的服务器</strong>上，开发者无法访问</li>
+    <li>请妥善保管密码与访问令牌；令牌泄露等同于账号泄露</li>
+    <li>可随时在「设置 → 账号」中吊销单个设备令牌或退出所有设备</li>
+  </ul>
+
+  <h2>4. 不做保证</h2>
+  <p>本 App 按「现状」提供，不附带任何明示或暗示的担保。具体而言：</p>
+  <ul>
+    <li><strong>无服务等级承诺</strong>：不保证服务不中断、不出错</li>
+    <li><strong>不保证数据不丢失</strong>：请自行备份服务器数据</li>
+    <li>不保证第三方站点（B 站、抖音、小红书等）的抓取始终可用 —— 它们可能随时调整反爬策略</li>
+  </ul>
+
+  <h2>5. 责任限制</h2>
+  <p>在适用法律允许的最大范围内，开发者不对因使用或无法使用本 App 造成的任何直接或间接损失承担责任，包括但不限于数据丢失、服务中断、第三方内容侵权。</p>
+
+  <h2>6. 终止</h2>
+  <p>你可以随时停止使用并删除 App 与服务端。开发者保留在发现滥用行为时停止提供更新与支持的权利。</p>
+
+  <h2>7. 条款变更</h2>
+  <p>若本条款有实质性变更，会更新本页顶部的日期。</p>
+
+  <h2>8. 适用法律</h2>
+  <p>本条款适用中华人民共和国法律。</p>
+
+  <h2>9. 联系方式</h2>
+  <p>如有疑问：<a href="mailto:ninfovores365@gmail.com">ninfovores365@gmail.com</a></p>
+
+  <p class="sig">Sapling 是个人项目，不提供商业服务。相关：<a href="privacy.html">隐私政策</a> · <a href="support.html">支持</a></p>
+</div>
+<script>
+try{
+  var t=localStorage.getItem("theme")||"auto";
+  var d=(t==="dark")||(t==="auto"&&matchMedia("(prefers-color-scheme:dark)").matches);
+  document.documentElement.dataset.theme=d?"dark":"light";
+}catch(e){}
+</script>
+</body>
+</html>
