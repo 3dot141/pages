@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>支持 · Sapling</title>
+<style>
+:root{
+  --brand:#30CF79; --brand-deep:#346538; --brand-50:#EDF3EC; --brand-100:#DEE9DD;
+  --paper:#F7F6F3; --card:#FFFFFF; --line:#EAEAEA; --linesoft:#F1F0EE;
+  --ink:#1F2427; --ink-2:#6A6A66; --ink-3:#8C8B87; --hairline:#D9D7D2;
+}
+[data-theme="dark"]{
+  --brand-deep:#8FE3B0; --brand-50:#22301F; --brand-100:#2B4030;
+  --paper:#191919; --card:#202020; --line:#2E2E2E; --linesoft:#262626;
+  --ink:#F0EEEA; --ink-2:#A8A6A2; --ink-3:#7C7A76; --hairline:#3F3D3A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:16px/1.78 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:680px;margin:0 auto;padding:48px 20px 96px}
+.back{display:inline-block;font-size:13px;color:var(--ink-3);text-decoration:none;margin-bottom:20px}
+.back:hover{color:var(--ink)}
+h1{font-family:Georgia,"Songti SC","Noto Serif SC",serif;font-size:30px;line-height:1.25;
+  letter-spacing:-.015em;margin:0 0 6px;font-weight:600}
+.updated{font-size:12.5px;color:var(--ink-3);margin:0 0 40px}
+h2{font-size:19px;font-weight:600;margin:36px 0 10px;letter-spacing:-.005em}
+h3{font-size:16px;font-weight:600;margin:22px 0 6px;color:var(--ink-2)}
+p{margin:0 0 14px;color:var(--ink-2)}
+strong{color:var(--ink);font-weight:600}
+ul{margin:0 0 14px;padding-left:22px;color:var(--ink-2)}
+li{margin:5px 0}
+a{color:var(--brand-deep);text-decoration:underline;text-underline-offset:3px}
+a:hover{color:var(--brand)}
+.faq{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px 20px;margin:0 0 16px}
+.faq h3{margin:16px 0 4px}
+.faq p:last-child{margin-bottom:16px}
+.sig{font-size:12.5px;color:var(--ink-3);margin-top:48px;padding-top:20px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../">← 返回</a>
+  <h1>支持</h1>
+  <p class="updated">Sapling · 最后更新：2026-10-26</p>
+
+  <h2>这是什么 App</h2>
+  <p>Sapling 是一个个人内容库客户端：把网页、视频、播客剪藏进来，转成可检索的文档，再用自然语言检索。</p>
+
+  <h2>常见问题</h2>
+  <div class="faq">
+    <h3>打开 App 后一直停在登录页？</h3>
+    <p>在设置里填写的服务器地址需要能访问到你自己部署的 Sapling 服务端，并且 Token 正确。可以先用浏览器打开同一个地址，确认能正常访问。</p>
+
+    <h3>剪藏的视频没有转写？</h3>
+    <p>视频本身没有音轨时不会产生转写，详情页会明确写出。另一种情况是目标站点要求人机验证，此时 App 会提示你重新登录对应的采集源。</p>
+
+    <h3>内容存在哪里？会上传到你们的服务器吗？</h3>
+    <p>不会。所有数据只存在你自己填写的服务器上。详见 <a href="privacy.html">隐私政策</a>。</p>
+
+    <h3>支持哪些剪藏来源？</h3>
+    <p>通用网页与微信公众号文章；小红书、抖音、B 站、小宇宙有专门的解析。也支持直接上传 PDF / Word / 音视频文件。</p>
+
+    <h3>为什么 App 里没有导出功能？</h3>
+    <p>数据本就在你自己的服务器上，直接从服务端导出更完整。App 侧聚焦在采集与阅读。</p>
+  </div>
+
+  <h2>反馈</h2>
+  <p>邮件：<a href="mailto:ninfovores365@gmail.com">ninfovores365@gmail.com</a></p>
+  <p>如果能附上出问题的链接或截图，定位会快很多。</p>
+
+  <p class="sig">Sapling 是个人项目，没有客服团队，回复可能不及时，但每条都会看。</p>
+</div>
+<script>
+try{
+  var t=localStorage.getItem("theme")||"auto";
+  var d=(t==="dark")||(t==="auto"&&matchMedia("(prefers-color-scheme:dark)").matches);
+  document.documentElement.dataset.theme=d?"dark":"light";
+}catch(e){}
+</script>
+</body>
+</html>

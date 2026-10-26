@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>隐私政策 · Sapling</title>
+<style>
+:root{
+  --brand:#30CF79; --brand-deep:#346538; --brand-50:#EDF3EC; --brand-100:#DEE9DD;
+  --paper:#F7F6F3; --card:#FFFFFF; --line:#EAEAEA; --linesoft:#F1F0EE;
+  --ink:#1F2427; --ink-2:#6A6A66; --ink-3:#8C8B87; --hairline:#D9D7D2;
+}
+[data-theme="dark"]{
+  --brand-deep:#8FE3B0; --brand-50:#22301F; --brand-100:#2B4030;
+  --paper:#191919; --card:#202020; --line:#2E2E2E; --linesoft:#262626;
+  --ink:#F0EEEA; --ink-2:#A8A6A2; --ink-3:#7C7A76; --hairline:#3F3D3A;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:16px/1.78 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:680px;margin:0 auto;padding:48px 20px 96px}
+.back{display:inline-block;font-size:13px;color:var(--ink-3);text-decoration:none;margin-bottom:20px}
+.back:hover{color:var(--ink)}
+h1{font-family:Georgia,"Songti SC","Noto Serif SC",serif;font-size:30px;line-height:1.25;
+  letter-spacing:-.015em;margin:0 0 6px;font-weight:600}
+.updated{font-size:12.5px;color:var(--ink-3);margin:0 0 40px}
+h2{font-size:19px;font-weight:600;margin:36px 0 10px;letter-spacing:-.005em}
+h3{font-size:16px;font-weight:600;margin:22px 0 6px;color:var(--ink-2)}
+p{margin:0 0 14px;color:var(--ink-2)}
+strong{color:var(--ink);font-weight:600}
+ul{margin:0 0 14px;padding-left:22px;color:var(--ink-2)}
+li{margin:5px 0}
+a{color:var(--brand-deep);text-decoration:underline;text-underline-offset:3px}
+a:hover{color:var(--brand)}
+code{font-family:ui-monospace,"SF Mono",monospace;font-size:.9em;background:var(--linesoft);
+  padding:1px 6px;border-radius:5px}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+.sig{font-size:12.5px;color:var(--ink-3);margin-top:48px;padding-top:20px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../">← 返回</a>
+  <h1>隐私政策</h1>
+  <p class="updated">Sapling · 最后更新：2026-10-26</p>
+
+  <h2>概要</h2>
+  <p>Sapling 是一个<strong>个人内容库客户端</strong>。它不收集、不上传、不分析你的任何个人数据。</p>
+
+  <h2>我们不收集什么</h2>
+  <ul>
+    <li>没有账号体系，不收集姓名、邮箱、手机号</li>
+    <li>不收集设备标识符（IDFA / IDFV），不追踪跨 App 行为</li>
+    <li>没有埋点、统计、崩溃上报、广告 SDK</li>
+    <li>不使用任何第三方分析服务</li>
+  </ul>
+
+  <h2>你的数据存在哪里</h2>
+  <p>Sapling 本身不提供云服务。你在 App 首次使用时填入的<strong>服务器地址</strong>，是你自己部署的 Sapling 服务端。</p>
+  <p>你在 App 内产生的所有内容——剪藏的文章、笔记、图片、音视频、搜索记录——都<strong>只发送并存储在你填写的那个服务器上</strong>，由你自行控制与备份。我们无法访问它。</p>
+
+  <h2>App 请求哪些系统权限</h2>
+  <ul>
+    <li><strong>网络</strong>：连接你配置的服务器，用于同步内容</li>
+    <li><strong>照片 / 文件</strong>：仅在你主动点「上传图片 / 文件」时，由系统选择器读取你选中的那一个文件</li>
+    <li><strong>剪贴板</strong>：仅在你主动点「粘贴链接」时读取一次</li>
+  </ul>
+  <p>以上权限都不会在后台读取数据，也不会把内容发送到除你配置的服务器以外的任何地方。</p>
+
+  <h2>第三方共享</h2>
+  <p>没有。App 内所有网络请求都指向你配置的服务器地址。</p>
+
+  <h2>数据删除</h2>
+  <p>删除 App 会移除设备上的全部本地数据（服务器地址、登录凭证）。服务器上的内容需要你在服务器端自行删除，或在 App 内删除条目。</p>
+
+  <h2>儿童隐私</h2>
+  <p>本 App 不面向 13 岁以下儿童，也不会有意收集其任何信息。</p>
+
+  <h2>政策变更</h2>
+  <p>若本政策有实质性变更，会更新本页顶部的日期。</p>
+
+  <h2>联系方式</h2>
+  <p>如有疑问：<a href="mailto:ninfovores365@gmail.com">ninfovores365@gmail.com</a></p>
+
+  <p class="sig">Sapling 是个人项目，不提供商业服务，也不以任何形式 monetize 用户数据。</p>
+</div>
+<script>
+try{
+  var t=localStorage.getItem("theme")||"auto";
+  var d=(t==="dark")||(t==="auto"&&matchMedia("(prefers-color-scheme:dark)").matches);
+  document.documentElement.dataset.theme=d?"dark":"light";
+}catch(e){}
+</script>
+</body>
+</html>
